@@ -19,8 +19,8 @@ jobs:
       run: ls -lrth
     - name: cmd2
       run: ls /cvmfs/
-    - name: cmd3
-      run: ls /cvmfs/cms.cern.ch/
     - name: cmd4
       run: scramv1 project CMSSW
+    - name: cmd3
+      run: ls /cvmfs/cms.cern.ch/
 
