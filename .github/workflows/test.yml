@@ -21,6 +21,8 @@ jobs:
       run: ls /cvmfs/
     - name: cmd5
       run: ls /
+    - name: whichscram
+      run: which scram
     - name: cmd6
       run: ls /*
     - name: cmd4
