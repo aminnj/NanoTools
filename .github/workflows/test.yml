@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  runtests:
+
+    runs-on: ubuntu-latest    
+    container:
+      image: azul/zulu-openjdk-alpine:8-jre
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: foo
+      run: ls -lrth
+    - name: bar
+      run: cmsrel CMSSW_10_2_9
+
