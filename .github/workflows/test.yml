@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest    
     container:
-      image: cmssw/cms:rhel6-latest
+      image: cmssw/cms:rhel7-latest
 
     steps:
     - uses: actions/checkout@v2
