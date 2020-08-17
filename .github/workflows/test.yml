@@ -22,7 +22,9 @@ jobs:
     - name: cmd5
       run: ls /
     - name: whichscram
-      run: which scram
+      run: ls /opt/cms/cmsset_default.sh
+    - name: blah
+      run: ls /opt/cms/
     - name: cmd6
       run: ls /*
     - name: cmd4
