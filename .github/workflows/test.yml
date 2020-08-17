@@ -15,8 +15,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: foo
+    - name: cmd1
       run: ls -lrth
-    - name: bar
+    - name: cmd2
+      run: ls /cvmfs/
+    - name: cmd3
       run: cmsrel CMSSW_10_2_9
+    - name: cmd4
+      run: scramv1 project CMSSW
 
