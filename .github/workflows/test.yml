@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest    
     container:
-      image: azul/zulu-openjdk-alpine:8-jre
+      image: cmssw/cms:rhel6-latest
 
     steps:
     - uses: actions/checkout@v2
