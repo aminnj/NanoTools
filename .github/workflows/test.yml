@@ -23,5 +23,9 @@ jobs:
       if: always()
     - run: cd NanoCORE
       if: always()
-    - run: make test -j4
+    - run: make -j4
+      if: always()
+    - run: make
+      if: always()
+    - run: make test
       if: always()
