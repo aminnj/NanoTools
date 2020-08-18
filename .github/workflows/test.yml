@@ -27,5 +27,13 @@ jobs:
       if: always()
     - run: make
       if: always()
+    - run: make all
+      if: always()
     - run: make test
+      if: always()
+    - run: ls -lrth
+      if: always()
+    - run: which make
+      if: always()
+    - run: make --version
       if: always()
