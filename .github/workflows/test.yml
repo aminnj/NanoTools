@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest    
     container:
-      image: cmscloud/cc7-cvmfs
+        image: cmssw/cms:CMSSW_11_0_3
 
     steps:
     - run: ls -lrth
