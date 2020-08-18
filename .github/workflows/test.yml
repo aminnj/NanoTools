@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest    
     container:
-        image: cmssw/cms:CMSSW_11_0_3
+        image: cmssw/cmssw:CMSSW_10_2_18
 
     steps:
     - run: ls -lrth
