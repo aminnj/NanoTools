@@ -23,19 +23,15 @@ jobs:
       if: always()
     - run: cd NanoCORE
       if: always()
+    - run: which python
+      if: always()
+    - run: which python2.7
+      if: always()
+    - run: which python2
+      if: always()
+    - run: which python3
+      if: always()
     - run: cd NanoCORE && make test -j4
       if: always()
-    - run: cd NanoCORE && make -j4
-      if: always()
-    - run: make
-      if: always()
-    - run: make all
-      if: always()
-    - run: cd NanoCORE && make test
-      if: always()
     - run: ls -lrth
-      if: always()
-    - run: which make
-      if: always()
-    - run: make --version
       if: always()
