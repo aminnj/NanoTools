@@ -11,35 +11,13 @@ jobs:
 
     runs-on: ubuntu-latest    
     container:
-        image: cmssw/cmssw:CMSSW_10_2_18
+        image: rootproject/root:6.22.00-ubuntu20.04
 
     steps:
     - run: ls -lrth
-    - run: ls /cvmfs/
       if: always()
-    - run: ls /
-      if: always()
-    - run: ls /*
-      if: always()
-    - run: source /opt/cms/cmsset_default.sh
-      if: always()
-    - run: cat /opt/cms/entrypoint.sh
-      if: always()
-    - run: /opt/cms/entrypoint.sh ls
-      if: always()
-    - run: ls /opt/cms/
-      if: always()
-    - run: which cmsrel
-      if: always()
-    - run: which scramv1
-      if: always()
-    - run: which scram
-      if: always()
-    - run: scramv1 project CMSSW
-      if: always()
-    - run: ls /cvmfs/cms.cern.ch/
-      if: always()
-    - run: ls /opt/cms/cmsset_default.sh
+    - run: which root
       if: always()
     - uses: actions/checkout@v2
-
+    - run: ls -lrth
+      if: always()
