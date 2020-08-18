@@ -23,13 +23,15 @@ jobs:
       if: always()
     - run: cd NanoCORE
       if: always()
-    - run: make -j4
+    - run: cd NanoCORE && make test -j4
+      if: always()
+    - run: cd NanoCORE && make -j4
       if: always()
     - run: make
       if: always()
     - run: make all
       if: always()
-    - run: make test
+    - run: cd NanoCORE && make test
       if: always()
     - run: ls -lrth
       if: always()
