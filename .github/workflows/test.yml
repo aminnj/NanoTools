@@ -31,7 +31,7 @@ jobs:
       if: always()
     - run: which python3
       if: always()
-    - run: cd NanoCORE && make test -j4
+    - run: cd NanoCORE && make py3test -j4
       if: always()
     - run: ls -lrth
       if: always()

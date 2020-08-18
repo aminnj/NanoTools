@@ -13,6 +13,9 @@ $(LIB): $(OBJECTS)
 test: all
 	python Tools/unit_tests/tests.py
 
+py3test: all
+	python3 Tools/unit_tests/tests.py
+
 all: $(LIB) 
 clean:
 	rm -f *.o \
