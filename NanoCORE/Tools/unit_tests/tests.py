@@ -75,7 +75,7 @@ class CORETest(unittest.TestCase):
 
     def test_jec_subcorrections(self):
         self.jetcorr.setJetPtEtaARho(50., 1.1, 0.5, 25.)
-        subcorrs = map(float, self.jetcorr.getSubCorrections())
+        subcorrs = list(map(float, self.jetcorr.getSubCorrections()))
         self.assertEqual(
             vround(subcorrs), 
             vround([
