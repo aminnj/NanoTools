@@ -11,24 +11,23 @@ jobs:
 
     runs-on: ubuntu-latest    
     container:
-      image: cmssw/cms:rhel7-latest
+      image: cmssw/cms:slc7-installer
 
     steps:
     - uses: actions/checkout@v2
-    - name: cmd1
-      run: ls -lrth
-    - name: cmd2
-      run: ls /cvmfs/
-    - name: cmd5
-      run: ls /
-    - name: cmd6
-      run: ls /*
-    - name: blah
-      run: ls /opt/cms/
-    - name: cmd4
-      run: scramv1 project CMSSW
-    - name: cmd3
-      run: ls /cvmfs/cms.cern.ch/
-    - name: whichscram
-      run: ls /opt/cms/cmsset_default.sh
+    - run: ls -lrth
+    - run: ls /cvmfs/
+      if: always()
+    - run: ls /
+      if: always()
+    - run: ls /*
+      if: always()
+    - run: ls /opt/cms/
+      if: always()
+    - run: scramv1 project CMSSW
+      if: always()
+    - run: ls /cvmfs/cms.cern.ch/
+      if: always()
+    - run: ls /opt/cms/cmsset_default.sh
+      if: always()
 
