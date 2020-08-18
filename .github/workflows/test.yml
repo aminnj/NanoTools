@@ -21,14 +21,14 @@ jobs:
       run: ls /cvmfs/
     - name: cmd5
       run: ls /
-    - name: whichscram
-      run: ls /opt/cms/cmsset_default.sh
-    - name: blah
-      run: ls /opt/cms/
     - name: cmd6
       run: ls /*
+    - name: blah
+      run: ls /opt/cms/
     - name: cmd4
       run: scramv1 project CMSSW
     - name: cmd3
       run: ls /cvmfs/cms.cern.ch/
+    - name: whichscram
+      run: ls /opt/cms/cmsset_default.sh
 
