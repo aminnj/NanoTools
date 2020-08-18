@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest    
     container:
-        image: cmssw/slc7-installer:latest
+      image: cmscloud/cc7-cvmfs
 
     steps:
     - uses: actions/checkout@v2
