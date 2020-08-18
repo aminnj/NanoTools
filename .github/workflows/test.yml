@@ -21,11 +21,19 @@ jobs:
       if: always()
     - run: ls /*
       if: always()
+    - run: source /opt/cms/cmsset_default.sh
+      if: always()
     - run: cat /opt/cms/entrypoint.sh
       if: always()
     - run: /opt/cms/entrypoint.sh ls
       if: always()
     - run: ls /opt/cms/
+      if: always()
+    - run: which cmsrel
+      if: always()
+    - run: which scramv1
+      if: always()
+    - run: which scram
       if: always()
     - run: scramv1 project CMSSW
       if: always()
