@@ -14,13 +14,16 @@ jobs:
       image: cmscloud/cc7-cvmfs
 
     steps:
-    - uses: actions/checkout@v2
     - run: ls -lrth
     - run: ls /cvmfs/
       if: always()
     - run: ls /
       if: always()
     - run: ls /*
+      if: always()
+    - run: cat /opt/cms/entrypoint.sh
+      if: always()
+    - run: /opt/cms/entrypoint.sh ls
       if: always()
     - run: ls /opt/cms/
       if: always()
@@ -30,4 +33,5 @@ jobs:
       if: always()
     - run: ls /opt/cms/cmsset_default.sh
       if: always()
+    - uses: actions/checkout@v2
 
